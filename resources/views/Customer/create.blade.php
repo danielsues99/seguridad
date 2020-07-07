@@ -1,0 +1,63 @@
+@extends('layouts.master')
+
+@section('content')
+
+
+    <div class="row" style="margin-top:20px">
+ 	<div class="col-md-offset-3 col-md-6">
+ 		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title text-center">
+					<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+					Añadir Cliente
+				</h3>
+			</div>
+ 			<div class="panel-body" style="padding:30px">
+                <form action="{{ url('catalog/create') }}" method="POST">
+				{{-- TODO: Abrir el formulario e indicar el método POST --}}
+                    {{ csrf_field() }}
+					{{-- TODO: Protección contra CSRF --}}
+    
+    				<div class="form-group">
+    					<label for="name">Nombre del Cliente</label>
+    					<input type="text" name="name" id="name" class="form-control">
+					</div>
+ 					<div class="form-group">
+						{{-- TODO: Completa el input para documento --}}
+                        <label for="document">NIT o Documento</label>
+                        <input type="number" name="document" id="document" class="form-control">
+					</div>
+ 					<div class="form-group">
+						{{-- TODO: Completa el input para el tipo de documento --}}
+                        <label for="typedocument">Tipo de Documento</label>
+                        <input type="text" name="typedocument" id="typedocument" class="form-control">
+					</div>
+					<div class="form-group">
+    					<label for="phone">Teléfono</label>
+    					<input type="text" name="phone" id="phone" class="form-control">
+					</div>
+ 					<div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control">
+						{{-- TODO: Completa el input para el correo --}}
+					</div>
+					<div class="form-group">
+    					<label for="address">Dirección</label>
+    					<input type="text" name="address" id="address" class="form-control">
+					</div>
+					<div class="form-group">
+    					<label for="city">Ciudad</label>
+    					<input type="text" name="city" id="city" class="form-control">
+					</div>
+ 					<div class="form-group text-center">
+						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
+							Añadir Cliente
+						</button>
+					</div>
+ 				{{-- TODO: Cerrar formulario --}}
+                </form>
+			</div>
+		</div>
+	</div>
+</div>
+@stop

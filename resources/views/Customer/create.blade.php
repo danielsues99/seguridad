@@ -13,9 +13,9 @@
 				</h3>
 			</div>
  			<div class="panel-body" style="padding:30px">
-                <form action="{{ url('catalog/create') }}" method="POST">
+                <form action="{{ url('/customers') }}" method="POST">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
-                    {{ csrf_field() }}
+					@csrf
 					{{-- TODO: Protección contra CSRF --}}
     
     				<div class="form-group">
@@ -60,4 +60,4 @@
 		</div>
 	</div>
 </div>
-@stop
+@endsection

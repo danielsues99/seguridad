@@ -13,13 +13,13 @@
 				</h3>
 			</div>
  			<div class="panel-body" style="padding:30px">
-                <form action="{{ url('catalog/create') }}" method="POST">
+                <form action="{{ url('/products') }}" method="POST">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
-                    {{ csrf_field() }}
+					@csrf
 					{{-- TODO: Protección contra CSRF --}}
     
     				<div class="form-group">
-    					<label for="name">Nombre del Producto</label>
+    					<label for="nameproduct">Nombre del Producto</label>
     					<input type="text" name="nameproduct" id="nameproduct" class="form-control">
 					</div>
  					<div class="form-group">
@@ -33,8 +33,8 @@
                         <input type="text" name="model" id="model" class="form-control">
 					</div>
 					<div class="form-group">
-    					<label for="description">Descripción</label>
-    					<input type="text" name="description" id="description" class="form-control">
+						<label for="description">Descripción</label>
+						<textarea name="description" id="description" class="form-control" rows="3"></textarea>
 					</div>
  					<div class="form-group">
                         <label for="cost">Costo</label>
@@ -52,4 +52,4 @@
 		</div>
 	</div>
 </div>
-@stop
+@endsection

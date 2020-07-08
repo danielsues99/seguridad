@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductController extends Controller
 {
@@ -13,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products	=	Product::all();
+		return view ('Product.index')->with('arrayproducts', $products);
     }
 
     /**
@@ -34,7 +36,19 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $product = new Product;
+            $product->nameproduct = $request->nameproduct;
+            $product->mark = $request->mark;
+            $product->model = $request->model;
+            $product->description = $request->description;
+            $product->cost = $request->cost;
+            $product->save();
+            }
+            catch(\App\Exceptions\NotFoundmonException $e)
+            {
+                return $e->getMessage();
+            }
     }
 
     /**

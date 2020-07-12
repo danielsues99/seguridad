@@ -72,7 +72,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $customer = customer::findOrFail($id);
+		return view('/customer/edit')->with('customer',$customer);
     }
 
     /**
@@ -84,7 +85,18 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'document' => 'required',
+            'typedocument' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+        ]);
+        Customer::whereId($id)->update($validatedData);
+
+        return redirect('/customers')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -95,6 +107,8 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = Customer::find($id);
+        $customer->delete();
+        return redirect('/customers');
     }
 }

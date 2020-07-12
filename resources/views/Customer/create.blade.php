@@ -29,8 +29,11 @@
 					</div>
  					<div class="form-group">
 						{{-- TODO: Completa el input para el tipo de documento --}}
-                        <label for="typedocument">Tipo de Documento</label>
-                        <input type="text" name="typedocument" id="typedocument" class="form-control">
+						<label for="typedocument" id="typedocument">Tipo de Documento</label>
+						<select name="typedocument" class="custom-select">
+							<option value="Nit">NIT</option>
+							<option value="Cedula">Cédula de ciudadanía</option>
+						  </select>
 					</div>
 					<div class="form-group">
     					<label for="phone">Teléfono</label>

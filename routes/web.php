@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::resource('/customers', 'CustomerController');
 Route::resource('/products', 'ProductController');
 Route::resource('/camaras', 'CamaraController');
+Route::resource('/alarms', 'AlarmController');
 
 Auth::routes();
 

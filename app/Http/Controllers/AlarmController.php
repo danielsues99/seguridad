@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Customer;
+use App\Alarm;
 
-class CustomerController extends Controller
+class AlarmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $customers	=	Customer::all();
-		return view ('Customer.index')->with('arraycustomers', $customers);
+        $alarms	=	Alarm::all();
+		return view ('Alarm.index')->with('arrayalarms', $alarms);
     }
 
     /**
@@ -25,7 +25,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('Customer.create');
+        return view('Alarm.create');
     }
 
     /**
@@ -37,20 +37,19 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         try{
-        $customer = new Customer;
-        $customer->name = $request->name;
-        $customer->document = $request->document;
-        $customer->typedocument = $request->typedocument;
-        $customer->phone = $request->phone;
-        $customer->email = $request->email;
-        $customer->address = $request->address;
-        $customer->city = $request->city;
-        $customer->save();
-        }
-        catch(\App\Exceptions\NotFoundmonException $e)
-        {
-            return $e->getMessage();
-        }
+            $alarm = new Alarm;
+            $alarm->name = $request->name;
+            $alarm->mark = $request->mark;
+            $alarm->model = $request->model;
+            $alarm->tecnology = $request->tecnology;
+            $alarm->imagen = $request->imagen;
+            $alarm->cost = $request->cost;
+            $alarm->save();
+            }
+            catch(\App\Exceptions\NotFoundmonException $e)
+            {
+                return $e->getMessage();
+            }
     }
 
     /**
@@ -72,8 +71,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        $customer = Customer::findOrFail($id);
-		return view('/customer/edit')->with('customer',$customer);
+        $alarm = Alarm::findOrFail($id);
+		return view('/alarm/edit')->with('alarm',$alarm);
     }
 
     /**
@@ -87,16 +86,15 @@ class CustomerController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'document' => 'required',
-            'typedocument' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
-            'address' => 'required',
-            'city' => 'required',
+            'mark' => 'required',
+            'model' => 'required',
+            'tecnology' => 'required',
+            'imagen' => 'required',
+            'cost' => 'required',
         ]);
-        Customer::whereId($id)->update($validatedData);
+        Alarm::whereId($id)->update($validatedData);
 
-        return redirect('/customers')->with('success', 'Actualizado correctamente');
+        return redirect('/alarms')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -107,8 +105,8 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        $customer = Customer::find($id);
-        $customer->delete();
-        return redirect('/customers');
+        $alarm = Alarm::find($id);
+        $alarm->delete();
+        return redirect('/alarms');
     }
 }

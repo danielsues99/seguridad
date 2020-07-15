@@ -20,6 +20,8 @@ Route::resource('/customers', 'CustomerController');
 Route::resource('/products', 'ProductController');
 Route::resource('/camaras', 'CamaraController');
 Route::resource('/alarms', 'AlarmController');
+Route::resource('/accesscontrols', 'AccesscontrolController');
+Route::resource('/intercoms', 'IntercomController');
 
 Auth::routes();
 

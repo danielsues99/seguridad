@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('AccessControl') && ! Request::is('AccessControl/create')? 'active' : ''}}">
-                            <a class="nav-link" href="{{url('/accesscontrols')}}">
+                            <a class="nav-link" href="{{url('/accesscontrolsadmin')}}">
                                 <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                                 Catálogo
                             </a>

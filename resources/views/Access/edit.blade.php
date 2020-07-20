@@ -9,7 +9,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title text-center">
 					<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-					Editarr Control de Acceso
+					Editar Control de Acceso
 				</h3>
 			</div>
  			<div class="panel-body" style="padding:30px">

@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('Alarm') && ! Request::is('Alarm/create')? 'active' : ''}}">
-                            <a class="nav-link" href="{{url('/alarms')}}">
+                            <a class="nav-link" href="{{url('/alarmsadmin')}}">
                                 <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                                 Alarmas
                             </a>

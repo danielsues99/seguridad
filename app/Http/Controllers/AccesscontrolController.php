@@ -44,6 +44,7 @@ class AccesscontrolController extends Controller
             $accesscontrol->imagen = $request->imagen;
             $accesscontrol->cost = $request->cost;
             $accesscontrol->save();
+            return redirect('/accesscontrolsadmin');
             }
             catch(\App\Exceptions\NotFoundmonException $e)
             {
@@ -92,7 +93,7 @@ class AccesscontrolController extends Controller
         ]);
         AccessControl::whereId($id)->update($validatedData);
 
-        return redirect('/accesscontrols')->with('success', 'Actualizado correctamente');
+        return redirect('/accesscontrolsadmin')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -105,6 +106,10 @@ class AccesscontrolController extends Controller
     {
         $accesscontrol = AccessControl::find($id);
         $accesscontrol->delete();
-        return redirect('/accesscontrols');
+        return redirect('/accesscontrolsadmin');
+    }
+    public function catalog(){
+        $catalog = AccessControl::all();
+        return view ("Access.catalog",['arrayaccesscontrols'=> $catalog]);
     }
 }

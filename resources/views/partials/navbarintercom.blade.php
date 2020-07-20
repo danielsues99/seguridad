@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('Intercom') && ! Request::is('Intercom/create')? 'active' : ''}}">
-                            <a class="nav-link" href="{{url('/intercoms')}}">
+                            <a class="nav-link" href="{{url('/intercomsadmin')}}">
                                 <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                                 Video Porteros
                             </a>

@@ -44,6 +44,7 @@ class IntercomController extends Controller
             $intercom->imagen = $request->imagen;
             $intercom->cost = $request->cost;
             $intercom->save();
+            return redirect('/intercomsadmin');
             }
             catch(\App\Exceptions\NotFoundmonException $e)
             {
@@ -92,7 +93,7 @@ class IntercomController extends Controller
         ]);
         Intercom::whereId($id)->update($validatedData);
 
-        return redirect('/intercoms')->with('success', 'Actualizado correctamente');
+        return redirect('/intercomsadmin')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -105,6 +106,10 @@ class IntercomController extends Controller
     {
         $intercom = Intercom::find($id);
         $intercom->delete();
-        return redirect('/intercoms');
+        return redirect('/intercomsadmin');
+    }
+    public function catalog(){
+        $catalog = Intercom::all();
+        return view ("Intercom.catalog",['arrayintercoms'=> $catalog]);
     }
 }

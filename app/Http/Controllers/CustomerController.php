@@ -46,6 +46,7 @@ class CustomerController extends Controller
         $customer->address = $request->address;
         $customer->city = $request->city;
         $customer->save();
+        return redirect('/customers');
         }
         catch(\App\Exceptions\NotFoundmonException $e)
         {

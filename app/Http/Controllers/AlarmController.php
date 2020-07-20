@@ -45,6 +45,7 @@ class AlarmController extends Controller
             $alarm->imagen = $request->imagen;
             $alarm->cost = $request->cost;
             $alarm->save();
+            return redirect('/alarmsadmin');
             }
             catch(\App\Exceptions\NotFoundmonException $e)
             {
@@ -94,7 +95,7 @@ class AlarmController extends Controller
         ]);
         Alarm::whereId($id)->update($validatedData);
 
-        return redirect('/alarms')->with('success', 'Actualizado correctamente');
+        return redirect('/alarmsadmin')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -107,6 +108,10 @@ class AlarmController extends Controller
     {
         $alarm = Alarm::find($id);
         $alarm->delete();
-        return redirect('/alarms');
+        return redirect('/alarmsadmin');
+    }
+    public function catalog(){
+        $catalog = Alarm::all();
+        return view ("Alarm.catalog",['arrayalarms'=> $catalog]);
     }
 }

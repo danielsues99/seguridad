@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('Camara') && ! Request::is('Camara/create')? 'active' : ''}}">
-                            <a class="nav-link" href="{{url('/camaras')}}">
+                            <a class="nav-link" href="{{url('/camarasadmin')}}">
                                 <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                                 Catálogo
                             </a>

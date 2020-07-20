@@ -46,6 +46,7 @@ class CamaraController extends Controller
             $camara->imagen = $request->imagen;
             $camara->cost = $request->cost;
             $camara->save();
+            return redirect('/camarasadmin');
             }
             catch(\App\Exceptions\NotFoundmonException $e)
             {
@@ -96,7 +97,7 @@ class CamaraController extends Controller
         ]);
         Camara::whereId($id)->update($validatedData);
 
-        return redirect('/camaras')->with('success', 'Actualizado correctamente');
+        return redirect('/camarasadmin')->with('success', 'Actualizado correctamente');
     }
 
     /**
@@ -109,6 +110,10 @@ class CamaraController extends Controller
     {
         $camara = Camara::find($id);
         $camara->delete();
-        return redirect('/camaras');
+        return redirect('/camarasadmin');
+    }
+    public function catalog(){
+        $catalog = Camara::all();
+        return view ("Camara.catalog",['arraycamaras'=> $catalog]);
     }
 }

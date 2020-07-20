@@ -61,7 +61,8 @@ class AlarmController extends Controller
      */
     public function show($id)
     {
-        //
+        $alarm = Alarm::findOrFail($id);
+		return view('Alarm.show')->with('alarm',$alarm);
     }
 
     /**

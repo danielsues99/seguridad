@@ -32,9 +32,13 @@ Route::get('/intercomsadmin', 'IntercomController@index');
 
 //Rutas catalogos para cliente
 Route::get('/alarms', 'AlarmController@catalog');
+Route::get('/alarms/{alarm}', 'AlarmController@show');
 Route::get('/camaras', 'CamaraController@catalog');
+Route::get('/camaras/{camara}', 'CamaraController@show');
 Route::get('/accesscontrols', 'AccesscontrolController@catalog');
+Route::get('/accesscontrols/{accesscontrol}', 'AccesscontrolController@show');
 Route::get('/intercoms', 'IntercomController@catalog');
+Route::get('/aintercoms/{intercom}', 'IntercomController@show');
 Route::get('/inicio', function () {
     return view('inicio');
 });

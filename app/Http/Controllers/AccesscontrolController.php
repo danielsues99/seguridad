@@ -60,7 +60,8 @@ class AccesscontrolController extends Controller
      */
     public function show($id)
     {
-        //
+        $accesscontrol = AccessControl::findOrFail($id);
+		return view('Access.show')->with('accesscontrol',$accesscontrol);
     }
 
     /**

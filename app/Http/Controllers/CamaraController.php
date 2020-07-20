@@ -62,7 +62,8 @@ class CamaraController extends Controller
      */
     public function show($id)
     {
-        //
+        $camara = Camara::findOrFail($id);
+		return view('Camara.show')->with('camara',$camara);
     }
 
     /**

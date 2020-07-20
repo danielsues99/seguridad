@@ -26,9 +26,7 @@
             <a href="{{ url('/inicio') }}"><button class="home"><i class="fa fa-home"></i> Inicio </button></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            @if( Auth::check() )
+            </button>          
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('Alarm') && ! Request::is('Alarm/catalog')? 'active' : ''}}">
@@ -63,7 +61,6 @@
                         </li>
                     </ul>
                 </div>
-                @endif
         </div>
     </nav>
 </body>

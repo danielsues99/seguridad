@@ -60,7 +60,8 @@ class IntercomController extends Controller
      */
     public function show($id)
     {
-        //
+        $intercom = Intercom::findOrFail($id);
+		return view('Intercom.show')->with('intercom',$intercom);
     }
 
     /**

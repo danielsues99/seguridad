@@ -9,7 +9,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title text-center">
 					<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-					AEditar Video Portero
+					Editar Video Portero
 				</h3>
 			</div>
  			<div class="panel-body" style="padding:30px">

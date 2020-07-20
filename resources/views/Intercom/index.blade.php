@@ -10,6 +10,7 @@
                 <th>Modelo</th>
                 <th>Imagen</th>
                 <th>Precio</th>
+                <th>Descripción</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </thead>
@@ -20,6 +21,7 @@
                 <td>{{$intercoms['model']}}</td>
                 <td>{{$intercoms['imagen']}}</td>
                 <td>{{$intercoms['cost']}}</td>
+                <td>{{$intercoms['description']}}</td>
                 <td><a class="btn btn-warning" href="{{ url('intercoms/'.$intercoms['id'].'/edit') }}"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
                 <td><form action="{{action('IntercomController@destroy', $intercoms->id)}}" method="POST" style="display:inline">
                     {{ method_field('delete') }}

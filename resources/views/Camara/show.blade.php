@@ -28,6 +28,9 @@
             <p>
                 <strong>Precio:</strong> {{$camara['cost']}} <strong> $ COP</strong>
             </p> 
+            <p>
+                <strong>Descripción:</strong> {{$camara['description']}}
+            </p>
             <a href="{{ url('/camaras') }}">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado

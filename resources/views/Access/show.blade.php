@@ -21,7 +21,10 @@
             </p>
             <p>
                 <strong>Precio:</strong> {{$accesscontrol['cost']}}
-            </p> 
+            </p>
+            <p>
+                <strong>Descripción:</strong> {{$accesscontrol['description']}}
+            </p>
             <a href="{{ url('/accesscontrols') }}">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado

@@ -12,6 +12,7 @@
                 <th>Tecnología</th>
                 <th>Imagen</th>
                 <th>Precio</th>
+                <th>Descripción</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </thead>
@@ -24,6 +25,7 @@
                 <td>{{$camara['tecnology']}}</td>
                 <td>{{$camara['imagen']}}</td>
                 <td>{{$camara['cost']}}</td>
+                <td>{{$camara['description']}}</td>
                 <td><a class="btn btn-warning" href="{{ url('camaras/'.$camara['id'].'/edit') }}"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
                 <td><form action="{{action('CamaraController@destroy', $camara->id)}}" method="POST" style="display:inline">
                     {{ method_field('delete') }}

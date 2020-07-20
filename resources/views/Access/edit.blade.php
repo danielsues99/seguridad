@@ -41,6 +41,10 @@
     					<label for="cost">Precio</label>
     					<input type="number" name="cost" id="cost" class="form-control" value="{{$accesscontrol['cost']}}">
 					</div>
+					<div class="form-group">
+						<label for="description">Descripción</label>
+						<textarea name="description" id="description" class="form-control" rows="3"> {{$accesscontrol['description']}}</textarea>
+					</div>
  					<div class="form-group text-center">
 						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
 							Actualizar

@@ -43,6 +43,7 @@ class AccesscontrolController extends Controller
             $accesscontrol->model = $request->model;
             $accesscontrol->imagen = $request->imagen;
             $accesscontrol->cost = $request->cost;
+            $accesscontrol->description = $request->description;
             $accesscontrol->save();
             return redirect('/accesscontrolsadmin');
             }
@@ -91,6 +92,7 @@ class AccesscontrolController extends Controller
             'model' => 'required',
             'imagen' => 'required',
             'cost' => 'required',
+            'description' => 'required',
         ]);
         AccessControl::whereId($id)->update($validatedData);
 

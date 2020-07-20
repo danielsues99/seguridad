@@ -44,6 +44,7 @@ class AlarmController extends Controller
             $alarm->tecnology = $request->tecnology;
             $alarm->imagen = $request->imagen;
             $alarm->cost = $request->cost;
+            $alarm->description = $request->description;
             $alarm->save();
             return redirect('/alarmsadmin');
             }
@@ -93,6 +94,7 @@ class AlarmController extends Controller
             'tecnology' => 'required',
             'imagen' => 'required',
             'cost' => 'required',
+            'description' => 'required',
         ]);
         Alarm::whereId($id)->update($validatedData);
 

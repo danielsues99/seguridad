@@ -11,6 +11,7 @@
                 <th>Tecnología</th>
                 <th>Imagen</th>
                 <th>Precio</th>
+                <th>Descripción</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </thead>
@@ -22,6 +23,7 @@
                 <td>{{$alarm['tecnology']}}</td>
                 <td>{{$alarm['imagen']}}</td>
                 <td>{{$alarm['cost']}}</td>
+                <td>{{$alarm['description']}}</td>
                 <td><a class="btn btn-warning" href="{{ url('alarms/'.$alarm['id'].'/edit') }}"><span class="glyphicon glyphicon-pencil"></span> Editar</a></td>
                 <td><form action="{{action('AlarmController@destroy', $alarm->id)}}" method="POST" style="display:inline">
                     {{ method_field('delete') }}

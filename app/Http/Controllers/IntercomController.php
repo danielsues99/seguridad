@@ -43,6 +43,7 @@ class IntercomController extends Controller
             $intercom->model = $request->model;
             $intercom->imagen = $request->imagen;
             $intercom->cost = $request->cost;
+            $intercom->description = $request->description;
             $intercom->save();
             return redirect('/intercomsadmin');
             }
@@ -91,6 +92,7 @@ class IntercomController extends Controller
             'model' => 'required',
             'imagen' => 'required',
             'cost' => 'required',
+            'description' => 'required',
         ]);
         Intercom::whereId($id)->update($validatedData);
 

@@ -24,7 +24,10 @@
             </p>
             <p>
                 <strong>Precio:</strong> {{$alarm['cost']}} <strong> $ COP</strong>
-            </p> 
+            </p>
+            <p>
+                <strong>Descripción:</strong> {{$alarm['description']}}
+            </p>
             <a href="{{ url('/alarms') }}">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado

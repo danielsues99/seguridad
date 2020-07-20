@@ -21,7 +21,10 @@
             </p>
             <p>
                 <strong>Precio:</strong> {{$intercom['cost']}} <strong> $ COP</strong>
-            </p> 
+            </p>
+            <p>
+                <strong>Descripción:</strong> {{$intercom['description']}}
+            </p>
             <a href="{{ url('/intercoms') }}">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-left"></span> Volver al listado

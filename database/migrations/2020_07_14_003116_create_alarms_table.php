@@ -21,6 +21,7 @@ class CreateAlarmsTable extends Migration
             $table->string('tecnology');
             $table->string('imagen');
             $table->string('cost');
+            $table->text('description');
             $table->timestamps();
         });
     }

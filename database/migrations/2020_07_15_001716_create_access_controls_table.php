@@ -20,6 +20,7 @@ class CreateAccessControlsTable extends Migration
             $table->string('model');
             $table->string('imagen');
             $table->string('cost');
+            $table->text('description');
             $table->timestamps();
         });
     }

@@ -45,6 +45,7 @@ class CamaraController extends Controller
             $camara->tecnology = $request->tecnology;
             $camara->imagen = $request->imagen;
             $camara->cost = $request->cost;
+            $camara->description = $request->description;
             $camara->save();
             return redirect('/camarasadmin');
             }
@@ -95,6 +96,7 @@ class CamaraController extends Controller
             'tecnology' => 'required',
             'imagen' => 'required',
             'cost' => 'required',
+            'description' => 'required',
         ]);
         Camara::whereId($id)->update($validatedData);
 

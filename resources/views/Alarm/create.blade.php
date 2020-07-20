@@ -20,17 +20,17 @@
     
     				<div class="form-group">
     					<label for="name">Nombre</label>
-    					<input type="text" name="name" id="name" class="form-control">
+    					<input type="text" name="name" id="name" class="form-control" required>
 					</div>
  					<div class="form-group">
 						{{-- TODO: Completa el input para la marca --}}
                         <label for="mark">Marca</label>
-                        <input type="text" name="mark" id="mark" class="form-control">
+                        <input type="text" name="mark" id="mark" class="form-control" required>
 					</div>
                     <div class="form-group">
 						{{-- TODO: Completa el input para el modelo --}}
                         <label for="model">Modelo</label>
-                        <input type="text" name="model" id="model" class="form-control">
+                        <input type="text" name="model" id="model" class="form-control" required>
 					</div>
                     <div class="form-group">
 						{{-- TODO: Completa el input para el tipo de tecnologia --}}
@@ -42,15 +42,15 @@
 					</div>
 					<div class="form-group">
     					<label for="imagen">Imagen</label>
-    					<input type="text" name="imagen" id="imagen" class="form-control">
+    					<input type="text" name="imagen" id="imagen" class="form-control" required>
 					</div>
 					<div class="form-group">
     					<label for="cost">Precio</label>
-    					<input type="number" name="cost" id="cost" class="form-control">
+    					<input type="number" name="cost" id="cost" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="description">Descripción</label>
-    					<textarea name="description" id="description" class="form-control" rows="3"></textarea>
+    					<textarea name="description" id="description" class="form-control" rows="3" required></textarea>
 					</div>
  					<div class="form-group text-center">
 						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">

@@ -20,17 +20,17 @@
     
                     <div class="form-group">
     					<label for="name">Nombre</label>
-    					<input type="text" name="name" id="name" class="form-control" value="{{$alarm['name']}}">
+    					<input type="text" name="name" id="name" class="form-control" value="{{$alarm['name']}}" required>
 					</div>
  					<div class="form-group">
 						{{-- TODO: Completa el input para la marca --}}
                         <label for="mark">Marca</label>
-                        <input type="text" name="mark" id="mark" class="form-control" value="{{$alarm['mark']}}">
+                        <input type="text" name="mark" id="mark" class="form-control" value="{{$alarm['mark']}}" required>
 					</div>
                     <div class="form-group">
 						{{-- TODO: Completa el input para el modelo --}}
                         <label for="model">Modelo</label>
-                        <input type="text" name="model" id="model" class="form-control" value="{{$alarm['model']}}">
+                        <input type="text" name="model" id="model" class="form-control" value="{{$alarm['model']}}" required>
 					</div>
                     <div class="form-group">
 						{{-- TODO: Completa el input para el tipo de tecnologia --}}
@@ -42,15 +42,15 @@
 					</div>
 					<div class="form-group">
     					<label for="imagen">Imagen</label>
-    					<input type="text" name="imagen" id="imagen" class="form-control" value="{{$alarm['imagen']}}">
+    					<input type="text" name="imagen" id="imagen" class="form-control" value="{{$alarm['imagen']}}" required>
 					</div>
 					<div class="form-group">
     					<label for="cost">Precio</label>
-    					<input type="number" name="cost" id="cost" class="form-control" value="{{$alarm['cost']}}">
+    					<input type="number" name="cost" id="cost" class="form-control" value="{{$alarm['cost']}}" required>
 					</div>
 					<div class="form-group">
 						<label for="description">Descripción</label>
-						<textarea name="description" id="description" class="form-control" rows="3"> {{$alarm['description']}}</textarea>
+						<textarea name="description" id="description" class="form-control" rows="3" required> {{$alarm['description']}}</textarea>
 					</div>
  					<div class="form-group text-center">
 						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">

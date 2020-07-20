@@ -6,7 +6,7 @@
 
         <div class="col-sm-4">
 
-            <img src="{{$alarm['imagen']}}" class="img-responsive" style="height:400px" style="width:3000px"/>
+            <img src="{{$alarm['imagen']}}" class="img-responsive" style="max-height:400px" style="max-width:3000px"/>
 
         </div>
         <div class="col-sm-8">

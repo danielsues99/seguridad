@@ -21,29 +21,29 @@
     
     				<div class="form-group">
     					<label for="name">Nombre</label>
-    					<input type="text" name="name" id="name" class="form-control" value="{{$intercom['name']}}">
+    					<input type="text" name="name" id="name" class="form-control" value="{{$intercom['name']}}" required>
 					</div>
  					<div class="form-group">
 						{{-- TODO: Completa el input para la marca --}}
                         <label for="mark">Marca</label>
-                        <input type="text" name="mark" id="mark" class="form-control" value="{{$intercom['mark']}}">
+                        <input type="text" name="mark" id="mark" class="form-control" value="{{$intercom['mark']}}" required>
 					</div>
                     <div class="form-group">
 						{{-- TODO: Completa el input para el modelo --}}
                         <label for="model">Modelo</label>
-                        <input type="text" name="model" id="model" class="form-control" value="{{$intercom['model']}}">
+                        <input type="text" name="model" id="model" class="form-control" value="{{$intercom['model']}}" required>
 					</div>
 					<div class="form-group">
     					<label for="imagen">Imagen</label>
-    					<input type="text" name="imagen" id="imagen" class="form-control" value="{{$intercom['imagen']}}">
+    					<input type="text" name="imagen" id="imagen" class="form-control" value="{{$intercom['imagen']}}" required>
 					</div>
 					<div class="form-group">
     					<label for="cost">Precio</label>
-    					<input type="number" name="cost" id="cost" class="form-control" value="{{$intercom['cost']}}">
+    					<input type="number" name="cost" id="cost" class="form-control" value="{{$intercom['cost']}}" required>
 					</div>
 					<div class="form-group">
 						<label for="description">Descripción</label>
-						<textarea name="description" id="description" class="form-control" rows="3"> {{$intercom['description']}}</textarea>
+						<textarea name="description" id="description" class="form-control" rows="3" required> {{$intercom['description']}}</textarea>
 					</div>
  					<div class="form-group text-center">
 						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">

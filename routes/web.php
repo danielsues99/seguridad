@@ -29,6 +29,7 @@ Route::get('/alarmsadmin', 'AlarmController@index');
 Route::get('/camarasadmin', 'CamaraController@index');
 Route::get('/accesscontrolsadmin', 'AccesscontrolController@index');
 Route::get('/intercomsadmin', 'IntercomController@index');
+Route::get('/cotizaciones', 'CotizacionController@index');
 
 //Rutas catalogos para cliente
 Route::get('/alarms', 'AlarmController@catalog');
@@ -38,7 +39,7 @@ Route::get('/camaras/{camara}', 'CamaraController@show');
 Route::get('/accesscontrols', 'AccesscontrolController@catalog');
 Route::get('/accesscontrols/{accesscontrol}', 'AccesscontrolController@show');
 Route::get('/intercoms', 'IntercomController@catalog');
-Route::get('/aintercoms/{intercom}', 'IntercomController@show');
+Route::get('/intercoms/{intercom}', 'IntercomController@show');
 Route::get('/inicio', function () {
     return view('inicio');
 });

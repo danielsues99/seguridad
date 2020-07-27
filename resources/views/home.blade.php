@@ -32,6 +32,11 @@
                             Videoporteros
                         </button></a>
                     </div>
+                    <div class="form-group text-center">
+                        <a href="{{ url('/cotizaciones') }}"><button type="submit" class="btn btn-info btn-block" style="padding:8px 100px;margin-top:25px;">
+                            Cotizaciones
+                        </button></a>
+                    </div>
                 </div>           
         </div>
     </div>

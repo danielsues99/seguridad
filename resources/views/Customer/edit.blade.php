@@ -30,9 +30,10 @@
                     <div class="form-group">
 						{{-- TODO: Completa el input para el tipo de documento --}}
 						<label for="typedocument" id="typedocument">Tipo de Documento</label>
-						<select name="typedocument" class="custom-select" value="{{$customer['typedocument']}}">
-							<option value="Nit">NIT</option>
-							<option value="Cedula">Cédula de ciudadanía</option>
+                        <select name="typedocument" class="custom-select" value="{{$customer['typedocument']}}">
+                            <option value="{{$customer['typedocument']}}">--{{$customer['typedocument']}}--</option>
+							<option value="NIT">NIT</option>
+							<option value="Cédula">Cédula de ciudadanía</option>
 						  </select>
 					</div>
                      <div class="form-group">
@@ -50,8 +51,18 @@
     					<input type="text" name="address" id="address" class="form-control" value="{{$customer['address']}}">
 					</div>
 					<div class="form-group">
-    					<label for="city">Ciudad</label>
-    					<input type="text" name="city" id="city" class="form-control" value="{{$customer['city']}}">
+						{{-- TODO: Completa el input para la ciudad --}}
+						<label for="city" id="city">Ciudad</label>
+                        <select name="city" class="custom-select" value="{{$customer['city']}}">
+                            <option value="{{$customer['city']}}">--{{$customer['city']}}--</option>
+							<option value="Bogotá">Bogotá</option>
+							<option value="Madrid">Madrid</option>
+							<option value="Funza">Funza</option>
+							<option value="Mosquera">Mosquera</option>
+							<option value="Soacha">Soacha</option>
+							<option value="La Calera">La Calera</option>
+							<option value="Colombia">Resto del País</option>
+						  </select>
 					</div>
                      <div class="form-group text-center">
                         <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">

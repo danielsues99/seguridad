@@ -49,8 +49,17 @@
     					<input type="text" name="address" id="address" class="form-control">
 					</div>
 					<div class="form-group">
-    					<label for="city">Ciudad</label>
-    					<input type="text" name="city" id="city" class="form-control">
+						{{-- TODO: Completa el input para la ciudad --}}
+						<label for="city" id="city">Ciudad</label>
+						<select name="city" class="custom-select">
+							<option value="Bogotá">Bogotá</option>
+							<option value="Madrid">Madrid</option>
+							<option value="Funza">Funza</option>
+							<option value="Mosquera">Mosquera</option>
+							<option value="Soacha">Soacha</option>
+							<option value="La Calera">La Calera</option>
+							<option value="Colombia">Resto del País</option>
+						  </select>
 					</div>
  					<div class="form-group text-center">
 						<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">

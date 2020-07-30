@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cotizacion;
+use App\Customer;
 
 class CotizacionController extends Controller
 {
@@ -34,7 +35,13 @@ class CotizacionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function query(Request $request)
+    {
+        $customer = Customer::findOrFail($id);
+		return view('/cotizacion/index')->with('customer',$customer);
+    }
+
+     public function store(Request $request)
     {
         //
     }
@@ -82,5 +89,13 @@ class CotizacionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function infosession(Request $request)
+    {
+        $request->session()->put(['Daniel'=>'Administrador']);
+        $request->session()->regenerate(); //Evitar ataques por session fixation
+        return $request->session()->all();
+        
     }
 }
